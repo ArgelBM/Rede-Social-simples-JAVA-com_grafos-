@@ -61,11 +61,4 @@ public class ScreamControl {
 
     }
 
-    public static void telaPostagens() throws IOException {
-        FXMLLoader loader = new FXMLLoader(ScreamControl.class.getResource("/gui/fxml/Hoje.fxml"));
-        Parent root = loader.load();
-
-        ControlerPrincipal controler = (ControlerPrincipal)ScreamControl.getControler();
-        controler.getContentArea().setCenter(root);
-    }
 }

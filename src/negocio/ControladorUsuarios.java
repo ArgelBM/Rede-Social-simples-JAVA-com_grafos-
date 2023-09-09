@@ -1,6 +1,7 @@
 package negocio;
 
 import dados.RepositorioGeral;
+import negocio.beans.Posts;
 import negocio.beans.Usuario;
 
 import java.io.Serializable;
@@ -55,6 +56,7 @@ public class ControladorUsuarios implements Serializable {
     public void salvarMudancas(){
         repositorio.salvar();
     }
+
 
 
 }

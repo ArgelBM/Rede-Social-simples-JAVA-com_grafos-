@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6c9056-dbeb-41aa-a089-0790bc9725cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/fxml/Hoje.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/styles/checkbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/styles/scrollpane.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/styles/scrollpane_principal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/negocio/beans/Posts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/fxml/Item.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proveAlgoritomos2va.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proveAlgoritomos2va.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dados/RepositorioGeral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/RepositorioGeral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ScreamControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ScreamControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerCadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/fxml/TelaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/fxml/TelaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/fxml/Hoje.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/fxml/Hoje.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/negocio/ControladorUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/ControladorUsuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/negocio/beans/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/negocio/beans/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Posts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/negocio/beans/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/temp/provas/algoritimos2/src/gui",
+    "last_opened_file_path": "C:/temp/F_Algoritmos_2va/proveAlgoritomos2va/src/gui/fxml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,18 +68,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\temp\F_Algoritmos_2va\proveAlgoritomos2va\src\gui\fxml" />
       <recent name="C:\temp\provas\algoritimos2\src\gui" />
       <recent name="C:\temp\provas\algoritimos2\src\gui\fxml" />
-      <recent name="C:\temp\F_Algoritmos_2va\proveAlgoritomos2va\src\gui\fxml" />
       <recent name="C:\temp\F_Algoritmos_2va\proveAlgoritomos2va\src" />
       <recent name="C:\temp\F_Algoritmos_2va\proveAlgoritomos2va\src\gui" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="gui.controlers" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Main" />
       <module name="proveAlgoritomos2va" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\java fx\openjfx-17_windows-x64_bin-sdk\javafx-sdk-17\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx\javafx-sdk-17.0.6\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="gui.*" />

@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Usuario implements Serializable {
+
     private String nomeUsuario;
     private String login;
     private String senha;
@@ -56,5 +57,17 @@ public class Usuario implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public void addPosts(Posts post){
+        posts.add(post);
+    }
+
+    public ArrayList<Posts> getPosts() {
+        return posts;
+    }
+
+    public Vertex getId() {
+        return id;
     }
 }

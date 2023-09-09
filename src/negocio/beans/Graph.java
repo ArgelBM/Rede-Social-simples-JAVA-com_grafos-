@@ -1,5 +1,8 @@
 package negocio.beans;
 
+import dados.RepositorioGeral;
+import negocio.ControladorUsuarios;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -97,4 +100,24 @@ public class Graph implements Serializable {
         return sugestoes;
     }
 
-}
+    public ArrayList<Posts> getPostagens(Vertex usuario){
+
+        return new ArrayList<>(RepositorioGeral.getInstance().findByVertex(usuario).getPosts());
+
+    }
+
+    public ArrayList<Posts> getFeedByUser(){
+        ArrayList<Posts> posts = new ArrayList<>();
+        for(Vertex vertex : getSeguidores(ControladorUsuarios.getInstance().getUsuarioAtivo().getId())) {
+
+            posts.addAll(RepositorioGeral.getInstance().findByVertex(vertex).getPosts());
+
+        }
+
+        posts.addAll(ControladorUsuarios.getInstance().getUsuarioAtivo().getPosts());
+        return posts;
+        }
+
+
+
+    }

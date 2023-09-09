@@ -55,6 +55,8 @@ public class ControlerLogin implements Initializable {
             ControladorUsuarios.getInstance().fazerLogin(usuario,key);
             System.out.println("sucesso!!!");
             ScreamControl.telaPrincipal();
+            System.out.println("sucesso!!!2");
+
         }
         catch (Exception a ){
             testador.setText("*usuario ou senha errados");

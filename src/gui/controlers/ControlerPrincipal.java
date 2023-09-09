@@ -3,7 +3,9 @@ package gui.controlers;
 import gui.ScreamControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -21,13 +23,15 @@ public class ControlerPrincipal implements Initializable {
 
         login.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getLogin());
         nomeDeUsuario.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getNomeUsuario());
-//        try {
-//            System.out.println("teste");
-//            ScreamControl.telaPostagens();
-//            System.out.println("t");
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            System.out.println("teste iniciar tela postagens antes");
+            carregarPosts();
+            System.out.println("teste iniciar tela postagens depois");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e);
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -57,7 +61,9 @@ public class ControlerPrincipal implements Initializable {
     }
 
     @FXML
-    void mostrarPosts(ActionEvent event) {
+    void mostrarPosts(ActionEvent event) throws IOException {
+
+        carregarPosts();
 
     }
 
@@ -81,5 +87,12 @@ public class ControlerPrincipal implements Initializable {
 
     public BorderPane getContentArea() {
         return contentArea;
+    }
+
+    public void carregarPosts() throws IOException {
+        FXMLLoader loader = new FXMLLoader(ScreamControl.class.getResource("/gui/fxml/Hoje.fxml"));
+        Parent root = loader.load();
+
+        contentArea.setCenter(root);
     }
 }

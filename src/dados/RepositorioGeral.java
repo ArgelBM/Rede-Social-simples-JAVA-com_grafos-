@@ -2,13 +2,16 @@ package dados;
 
 import negocio.beans.Usuario;
 import negocio.beans.Graph;
+import negocio.beans.Vertex;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class RepositorioGeral implements Serializable {
 
     private String fileName;
-    private ArrayList<Graph> graphList;
+
+    private Graph graph;
     private ArrayList<Usuario> userList;
     private static RepositorioGeral repositorioGeral;
 
@@ -26,11 +29,11 @@ public class RepositorioGeral implements Serializable {
         Object instancia = RepositorioFileUtil.lerDoArquivo(fileName);
         if(instancia != null && instancia instanceof RepositorioGeral){
             RepositorioGeral dadosCarregados = (RepositorioGeral) instancia;
-            this.graphList = dadosCarregados.getGraphList();
+            this.graph = dadosCarregados.getGraph();
             this.userList = dadosCarregados.getUserList();
         }
         else{
-            this.graphList = new ArrayList<>();
+            this.graph = new Graph();
             this.userList = new ArrayList<>();
 
 
@@ -76,12 +79,12 @@ public class RepositorioGeral implements Serializable {
         this.fileName = fileName;
     }
 
-    public ArrayList<Graph> getGraphList() {
-        return graphList;
+    public Graph getGraph() {
+        return graph;
     }
 
-    public void setGraphList(ArrayList<Graph> graphList) {
-        this.graphList = graphList;
+    public void setGraph(Graph graph) {
+        this.graph = graph;
     }
 
     public ArrayList<Usuario> getUserList() {
@@ -103,4 +106,15 @@ public class RepositorioGeral implements Serializable {
     public void salvar(){
         RepositorioFileUtil.salvarArquivo(repositorioGeral, fileName);
     }
+
+
+    public Usuario findByVertex(Vertex vertex){
+        for(Usuario usuario : userList){
+            if (usuario.getId() == vertex){
+                return usuario;
+            }
+        }
+        return null;
+    }
+
 }

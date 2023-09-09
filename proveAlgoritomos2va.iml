@@ -20,5 +20,6 @@
         <jarDirectory url="file://$MODULE_DIR$/../../../java fx/openjfx-17_windows-x64_bin-sdk/javafx-sdk-17/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="application" />
   </component>
 </module>
