@@ -1,6 +1,7 @@
 package gui;
 
 import gui.controlers.ControlerInicial;
+import gui.controlers.ControlerPrincipal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -58,5 +59,13 @@ public class ScreamControl {
         stage.setScene(mainScene);
         stage.show();
 
+    }
+
+    public static void telaPostagens() throws IOException {
+        FXMLLoader loader = new FXMLLoader(ScreamControl.class.getResource("/gui/fxml/Hoje.fxml"));
+        Parent root = loader.load();
+
+        ControlerPrincipal controler = (ControlerPrincipal)ScreamControl.getControler();
+        controler.getContentArea().setCenter(root);
     }
 }

@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import negocio.ControladorUsuarios;
@@ -20,11 +21,21 @@ public class ControlerPrincipal implements Initializable {
 
         login.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getLogin());
         nomeDeUsuario.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getNomeUsuario());
+//        try {
+//            System.out.println("teste");
+//            ScreamControl.telaPostagens();
+//            System.out.println("t");
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 
     @FXML
     private BorderPane contentArea;
+
+    @FXML
+    private TextField pesquisa;
 
     @FXML
     private Label login;
@@ -63,5 +74,12 @@ public class ControlerPrincipal implements Initializable {
 
     }
 
+    @FXML
+    void pesquisar(ActionEvent event) {
 
+    }
+
+    public BorderPane getContentArea() {
+        return contentArea;
+    }
 }

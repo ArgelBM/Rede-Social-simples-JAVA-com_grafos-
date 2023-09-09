@@ -4,6 +4,7 @@ import negocio.beans.Vertex;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class Usuario implements Serializable {
     private String senha;
     private Vertex id;
     private String cpf;
+    private ArrayList<Posts> posts;
 
     public Usuario(String nomeUsuario, String login, String senha, String cpf,Vertex vertice) {
         this.nomeUsuario = nomeUsuario;
@@ -20,6 +22,7 @@ public class Usuario implements Serializable {
         this.senha = senha;
         this.cpf = cpf;
         this.id = vertice;
+        this.posts = new ArrayList<>();
 
     }
 
