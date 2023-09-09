@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="contentArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controlers.ControlerPrincipal">
+   <left>
+      <VBox style="-fx-background-color: #CFCFCF;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="224.0" prefWidth="271.0" style="-fx-background-color: transparent;">
+               <children>
+                  <HBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="126.0" prefWidth="173.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="172.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/img/account.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#telaConfiguracao" prefHeight="28.0" prefWidth="24.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <MaterialIconView glyphName="SETTINGS" size="20" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip style="-fx-background-color: #FFFFFF; -fx-text-fill: black;" text="Abre as configurações">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <HBox style="-fx-background-color: transparent;">
+               <children>
+                  <Pane prefHeight="14.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane layoutY="-15.0" prefHeight="21.0" prefWidth="251.0">
+                           <children>
+                              <Button layoutX="223.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="223.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <MaterialIconView fill="#a6a6a6" glyphName="SEARCH" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <Separator prefHeight="12.0" prefWidth="271.0" style="-fx-background-color: #C1C1C1;" />
+            <VBox fx:id="vsp" alignment="CENTER" minHeight="77.0" prefHeight="77.0" prefWidth="271.0">
+               <children>
+                  <Label fx:id="nomeDeUsuario" alignment="CENTER" contentDisplay="CENTER" text="Nome do Usuario" textFill="#181818" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="login" alignment="CENTER" contentDisplay="RIGHT" text="email.do.usuario@email.com" textFill="#636363">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="246.0" prefWidth="271.0" spacing="15.0">
+               <children>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button alignment="TOP_LEFT" minWidth="262.0" mnemonicParsing="false" onAction="#mostrarPosts" prefHeight="59.0" prefWidth="262.0" style="-fx-background-color: transparent;" text="posts" textFill="#181818" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <MaterialIconView fill="#5297ff" glyphName="EVENT_NOTE" size="15" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button alignment="TOP_LEFT" minWidth="262.0" mnemonicParsing="false" onAction="#mostrarAmigos" prefHeight="59.0" prefWidth="262.0" style="-fx-background-color: transparent;" text="amigos" textFill="#181818" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <MaterialIconView fill="#f2f25f" glyphName="STAR_BORDER" size="15" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="266.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button alignment="TOP_LEFT" minWidth="262.0" mnemonicParsing="false" onAction="#mostrarIndicacoes" prefHeight="59.0" prefWidth="262.0" style="-fx-background-color: transparent;" text="Indicações" textFill="#181818" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <MaterialIconView fill="#ff9a14" glyphName="SHOW_CHART" size="15" />
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="5.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Separator prefHeight="11.0" prefWidth="271.0" style="-fx-background-color: #C1C1C1;" />
+            <HBox prefHeight="46.0" prefWidth="271.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="51.0" prefWidth="271.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button alignment="CENTER" minWidth="262.0" mnemonicParsing="false" onAction="#sair" prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="sair" textFill="#181818">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
