@@ -72,11 +72,11 @@ public class ControlerItem {
         this.lista.setText(usuario);
     }
 
-    public Label getNomeLabel() {
-        return nomeLabel;
+    public String getNomeLabel() {
+        return nomeLabel.getText();
     }
 
-    public void setNomeLabel(Label nomeLabel) {
-        this.nomeLabel = nomeLabel;
+    public void setNomeLabel(String nomeLabel) {
+        this.nomeLabel.setText(nomeLabel);
     }
 }

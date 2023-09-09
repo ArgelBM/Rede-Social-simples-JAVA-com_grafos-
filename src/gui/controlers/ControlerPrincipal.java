@@ -83,6 +83,8 @@ public class ControlerPrincipal implements Initializable {
     @FXML
     void pesquisar(ActionEvent event) {
 
+
+
     }
 
     public BorderPane getContentArea() {

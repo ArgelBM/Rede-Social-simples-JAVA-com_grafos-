@@ -15,8 +15,6 @@ public class RepositorioGeral implements Serializable {
     private ArrayList<Usuario> userList;
     private static RepositorioGeral repositorioGeral;
 
-
-
     public static RepositorioGeral getInstance(){
         if (repositorioGeral == null){
             repositorioGeral = new RepositorioGeral("DATA");
