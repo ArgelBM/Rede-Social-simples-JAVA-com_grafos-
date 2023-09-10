@@ -116,7 +116,9 @@ public class Graph implements Serializable {
 
         posts.addAll(ControladorUsuarios.getInstance().getUsuarioAtivo().getPosts());
         return posts;
-        }
+    }
+
+
 
 
 

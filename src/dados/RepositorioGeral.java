@@ -1,11 +1,13 @@
 package dados;
 
+import negocio.beans.Edge;
 import negocio.beans.Usuario;
 import negocio.beans.Graph;
 import negocio.beans.Vertex;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class RepositorioGeral implements Serializable {
 
@@ -115,4 +117,30 @@ public class RepositorioGeral implements Serializable {
         return null;
     }
 
+
+    public void seguir(Vertex usuario, Vertex destino) {
+        int flag = 0;
+        Iterator<Edge> iterator = graph.getEdges().iterator();
+        while (iterator.hasNext()) {
+            Edge edge = iterator.next();
+            if (edge.getSource() == usuario && edge.getDestination() == destino) {
+                iterator.remove();
+                flag = 1;
+                salvar();
+            }
+        }
+        if (flag == 0) {
+            graph.addEdge(usuario, destino);
+            salvar();
+        }
+    }
+
+    public boolean verifica(Vertex usuario, Vertex destino) {
+        boolean verifica = false;
+        for (Edge edge : graph.getEdges()) {
+            if (edge.getSource() == usuario && edge.getDestination() == destino) {
+                verifica = true;
+            }
+        }return verifica;
+    }
 }

@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6c9056-dbeb-41aa-a089-0790bc9725cc" name="Changes" comment="">
+    <list default="true" id="0b6c9056-dbeb-41aa-a089-0790bc9725cc" name="Changes" comment="organização não tinha relação com pontuação!">
+      <change afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerAmigos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerPerfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerPesquisa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/fxml/Perfil.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/fxml/TelaAmigos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/fxml/TelaPesquisa.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dados/RepositorioGeral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dados/RepositorioGeral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/negocio/beans/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/negocio/beans/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/gui/controlers/ControlerPesquisa.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +82,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Main" />
       <module name="proveAlgoritomos2va" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\java fx\openjfx-17_windows-x64_bin-sdk\javafx-sdk-17\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx\javafx-sdk-17.0.6\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="gui.*" />
@@ -101,6 +110,7 @@
       <workItem from="1694191995341" duration="12958000" />
       <workItem from="1694218026225" duration="612000" />
       <workItem from="1694221729552" duration="8841000" />
+      <workItem from="1694364016442" duration="14467000" />
     </task>
     <servers />
   </component>

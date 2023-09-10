@@ -1,5 +1,6 @@
 package negocio.beans;
 
+import dados.RepositorioGeral;
 import negocio.beans.Vertex;
 
 import java.io.Serializable;
@@ -61,6 +62,7 @@ public class Usuario implements Serializable {
 
     public void addPosts(Posts post){
         posts.add(post);
+        RepositorioGeral.getInstance().salvar();
     }
 
     public ArrayList<Posts> getPosts() {

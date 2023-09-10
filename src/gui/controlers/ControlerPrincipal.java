@@ -50,8 +50,16 @@ public class ControlerPrincipal implements Initializable {
     @FXML
     private VBox vsp;
 
+    public String getPesquisa() {
+        return pesquisa.getText();
+    }
+
     @FXML
-    void mostrarAmigos(ActionEvent event) {
+    void mostrarAmigos(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(ScreamControl.class.getResource("/gui/fxml/TelaAmigos.fxml"));
+        Parent root = loader.load();
+        contentArea.setCenter(root);
 
     }
 
@@ -81,9 +89,13 @@ public class ControlerPrincipal implements Initializable {
     }
 
     @FXML
-    void pesquisar(ActionEvent event) {
+    void pesquisar(ActionEvent event) throws IOException {
 
-
+        FXMLLoader loader = new FXMLLoader(ScreamControl.class.getResource("/gui/fxml/TelaPesquisa.fxml"));
+        Parent root = loader. load();
+        ControlerPesquisa controler = loader.getController();
+        controler.pesquisar();
+        contentArea.setCenter(root);
 
     }
 
@@ -97,4 +109,6 @@ public class ControlerPrincipal implements Initializable {
 
         contentArea.setCenter(root);
     }
+
+
 }
