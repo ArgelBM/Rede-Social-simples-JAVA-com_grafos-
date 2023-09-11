@@ -46,7 +46,7 @@ public class ControlerHoje implements Initializable {
         controler.carregarPosts();
     }
 
-    void incertionSort(ArrayList<Posts> posts){
+    void incertionSort(List<Posts> posts){
         int j;
         Posts key;
         int i;
@@ -56,17 +56,26 @@ public class ControlerHoje implements Initializable {
             for (i = j - 1; (i >= 0) && (posts.get(i).getHorario().isAfter(key.getHorario()) ); i--)
             {
                 posts.set((i+1), posts.get(i));
-//                vetor[i + 1] = vetor[i];
             }
             posts.set((i+1), key);
-//            vetor[i + 1] = key;
         }
     }
 
     void atualizarFeed() throws IOException {
 
        List<Posts> lista = RepositorioGeral.getInstance().getGraph().getFeedByUser();
-       Collections.reverse(lista);
+       incertionSort(lista);
+
+        for (Posts posts: lista){
+            System.out.println(posts.getConteudo()+ posts.getHorario()+ posts.getUsuario());
+        }
+
+
+        Collections.reverse(lista);
+
+        for (Posts posts: lista){
+            System.out.println(posts.getConteudo()+ posts.getHorario()+ posts.getUsuario());
+        }
 
         for (Posts posts : lista){
             FXMLLoader tela = new FXMLLoader(getClass().getResource("/gui/fxml/Item.fxml"));

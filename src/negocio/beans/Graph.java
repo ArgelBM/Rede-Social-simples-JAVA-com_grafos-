@@ -63,8 +63,8 @@ public class Graph implements Serializable {
         ArrayList<Vertex> seguidores = new ArrayList<>();
 
         for( Edge edge : edges){
-            if (edge.getDestination() == usuario){
-                seguidores.add(edge.getSource());
+            if (edge.getSource() == usuario){
+                seguidores.add(edge.getDestination());
             }
         }
         return seguidores;
@@ -109,17 +109,9 @@ public class Graph implements Serializable {
     public ArrayList<Posts> getFeedByUser(){
         ArrayList<Posts> posts = new ArrayList<>();
         for(Vertex vertex : getSeguidores(ControladorUsuarios.getInstance().getUsuarioAtivo().getId())) {
-
             posts.addAll(RepositorioGeral.getInstance().findByVertex(vertex).getPosts());
-
         }
-
         posts.addAll(ControladorUsuarios.getInstance().getUsuarioAtivo().getPosts());
         return posts;
     }
-
-
-
-
-
-    }
+}
