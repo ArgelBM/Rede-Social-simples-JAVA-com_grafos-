@@ -68,7 +68,12 @@ public class ControlerPerfil implements Initializable {
     }
 
     @FXML
-    void removerSeguidor(ActionEvent event) {
+    void indicar(ActionEvent event) {
+
+        for(Vertex vertex : RepositorioGeral.getInstance().getGraph().getSugestoesDePessoaEspecifica(ControladorUsuarios.getInstance().getUsuarioAtivo().getId(), Perfil)){
+            System.out.println(RepositorioGeral.getInstance().findByVertex(vertex).getNomeUsuario());
+        }
+
 
 
 

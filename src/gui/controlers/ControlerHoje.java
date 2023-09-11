@@ -62,21 +62,9 @@ public class ControlerHoje implements Initializable {
     }
 
     void atualizarFeed() throws IOException {
-
        List<Posts> lista = RepositorioGeral.getInstance().getGraph().getFeedByUser();
        incertionSort(lista);
-
-        for (Posts posts: lista){
-            System.out.println(posts.getConteudo()+ posts.getHorario()+ posts.getUsuario());
-        }
-
-
-        Collections.reverse(lista);
-
-        for (Posts posts: lista){
-            System.out.println(posts.getConteudo()+ posts.getHorario()+ posts.getUsuario());
-        }
-
+       Collections.reverse(lista);
         for (Posts posts : lista){
             FXMLLoader tela = new FXMLLoader(getClass().getResource("/gui/fxml/Item.fxml"));
             HBox item = tela.load();

@@ -45,10 +45,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <JFXButton buttonType="RAISED" onAction="#removerSeguidor" style="-fx-background-color: red; -fx-background-radius: 5px;" text="remover-" textFill="WHITE">
-                     <graphic>
-                        <MaterialIconView fill="WHITE" glyphName="DELETE" size="20" />
-                     </graphic>
+                  <JFXButton buttonType="RAISED" onAction="#indicar" style="-fx-background-color: red; -fx-background-radius: 5px;" text="Indicar +" textFill="WHITE">
                      <font>
                         <Font size="13.0" />
                      </font>

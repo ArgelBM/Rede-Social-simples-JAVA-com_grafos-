@@ -63,8 +63,8 @@ public class Graph implements Serializable {
         ArrayList<Vertex> seguidores = new ArrayList<>();
 
         for( Edge edge : edges){
-            if (edge.getSource() == usuario){
-                seguidores.add(edge.getDestination());
+            if (edge.getDestination() == usuario){
+                seguidores.add(edge.getSource());
             }
         }
         return seguidores;

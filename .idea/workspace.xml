@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6c9056-dbeb-41aa-a089-0790bc9725cc" name="Changes" comment="implementada funções e telas de interação entre os usuarios">
+    <list default="true" id="0b6c9056-dbeb-41aa-a089-0790bc9725cc" name="Changes" comment="correção da ordem dos posts">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/fxml/TelaIndicacao.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerAmigos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerAmigos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerHoje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/controlers/ControlerPerfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/controlers/ControlerPerfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/fxml/Perfil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/fxml/Perfil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/fxml/TelaAmigos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/fxml/TelaAmigos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/fxml/TelaPesquisa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/fxml/TelaPesquisa.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/negocio/beans/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/negocio/beans/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -26,7 +33,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/gui/controlers/ControlerPesquisa.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/gui/controlers/ControlerPesquisa.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -103,7 +110,8 @@
       <workItem from="1694218026225" duration="612000" />
       <workItem from="1694221729552" duration="8841000" />
       <workItem from="1694364016442" duration="15330000" />
-      <workItem from="1694452597029" duration="1739000" />
+      <workItem from="1694452597029" duration="7052000" />
+      <workItem from="1694460852069" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="implementada funções e telas de interação entre os usuarios">
       <created>1694384444412</created>
@@ -112,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694384444412</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="correção da ordem dos posts">
+      <created>1694454675471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694454675471</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="organização não tinha relação com pontuação!" />
     <MESSAGE value="implementada funções e telas de interação entre os usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementada funções e telas de interação entre os usuarios" />
+    <MESSAGE value="correção da ordem dos posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="correção da ordem dos posts" />
   </component>
 </project>
