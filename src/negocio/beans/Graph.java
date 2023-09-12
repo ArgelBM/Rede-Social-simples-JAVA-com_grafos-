@@ -4,7 +4,7 @@ import dados.RepositorioGeral;
 import negocio.ControladorUsuarios;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Graph implements Serializable {
 
@@ -46,37 +46,37 @@ public class Graph implements Serializable {
         return null;
     }
 
-    public ArrayList<Vertex> getSeguindo(Vertex usuario){
+    public ArrayList<Vertex> getSeguindo(Vertex usuario) {
 
         ArrayList<Vertex> seguindo = new ArrayList<>();
 
-        for( Edge edge : edges){
-            if (edge.getSource() == usuario){
+        for (Edge edge : edges) {
+            if (edge.getSource() == usuario) {
                 seguindo.add(edge.getDestination());
             }
         }
         return seguindo;
     }
 
-    public ArrayList<Vertex> getSeguidores(Vertex usuario){
+    public ArrayList<Vertex> getSeguidores(Vertex usuario) {
 
         ArrayList<Vertex> seguidores = new ArrayList<>();
 
-        for( Edge edge : edges){
-            if (edge.getDestination() == usuario){
+        for (Edge edge : edges) {
+            if (edge.getDestination() == usuario) {
                 seguidores.add(edge.getSource());
             }
         }
         return seguidores;
     }
 
-    public ArrayList<Vertex> getSeguindoEmComum(Vertex usuario1, Vertex usuario2){
+    public ArrayList<Vertex> getSeguindoEmComum(Vertex usuario1, Vertex usuario2) {
 
         ArrayList<Vertex> comuns = new ArrayList<>();
 
-        for(Vertex vertex1 : getSeguindo(usuario1)){
-            for(Vertex vertex2 : getSeguindo(usuario2)){
-                if(vertex1 == vertex2){
+        for (Vertex vertex1 : getSeguindo(usuario1)) {
+            for (Vertex vertex2 : getSeguindo(usuario2)) {
+                if (vertex1 == vertex2) {
                     comuns.add(vertex1);
                 }
             }
@@ -84,14 +84,14 @@ public class Graph implements Serializable {
         return comuns;
     }
 
-    public ArrayList<Vertex> getSugestoesDePessoaEspecifica(Vertex usuario1, Vertex usuarioAlvo){
+    public ArrayList<Vertex> getSugestoesDePessoaEspecifica(Vertex usuario1, Vertex usuarioAlvo) {
 
         ArrayList<Vertex> sugestoes = new ArrayList<>();
 
         ArrayList<Vertex> comuns_1e2 = getSeguindoEmComum(usuario1, usuarioAlvo);
 
-        for( Vertex vertex: comuns_1e2){
-            for( Vertex vertex1 : getSeguindoEmComum(usuarioAlvo, vertex)){
+        for (Vertex vertex : comuns_1e2) {
+            for (Vertex vertex1 : getSeguindoEmComum(usuarioAlvo, vertex)) {
                 sugestoes.add(vertex1);
 
             }
@@ -100,18 +100,68 @@ public class Graph implements Serializable {
         return sugestoes;
     }
 
-    public ArrayList<Posts> getPostagens(Vertex usuario){
+    public ArrayList<Posts> getPostagens(Vertex usuario) {
 
         return new ArrayList<>(RepositorioGeral.getInstance().findByVertex(usuario).getPosts());
 
     }
 
-    public ArrayList<Posts> getFeedByUser(){
+    public ArrayList<Posts> getFeedByUser() {
         ArrayList<Posts> posts = new ArrayList<>();
-        for(Vertex vertex : getSeguidores(ControladorUsuarios.getInstance().getUsuarioAtivo().getId())) {
+        for (Vertex vertex : getSeguindo(ControladorUsuarios.getInstance().getUsuarioAtivo().getId())) {
             posts.addAll(RepositorioGeral.getInstance().findByVertex(vertex).getPosts());
         }
         posts.addAll(ControladorUsuarios.getInstance().getUsuarioAtivo().getPosts());
         return posts;
     }
+
+    public ArrayList<Edge> getArestas(Vertex source){
+
+        ArrayList<Edge> edg = new ArrayList<>();
+
+        for (Edge edge : getEdges()){
+            if(edge.getSource() == source){
+                edg.add(edge);
+            }
+        }
+        return edg;
+    }
+
+
+
+    public List<Vertex> findPath(Vertex start, Vertex end) {
+        Queue<Vertex> queue = new LinkedList<>();
+        Map<Vertex, Vertex> parentMap = new HashMap<>();
+
+        queue.add(start);
+
+        while (!queue.isEmpty()) {
+            Vertex current = queue.poll();
+            if (current.equals(end)) {
+                break; // Caminho encontrado
+            }
+            for (Edge edge : edges) {
+                if (edge.getSource().equals(current) && !parentMap.containsKey(edge.getDestination())) {
+                    queue.add(edge.getDestination());
+                    parentMap.put(edge.getDestination(), current);
+                }
+            }
+        }
+
+        if (!parentMap.containsKey(end)) {
+            return null; // Não há caminho
+        }
+
+        List<Vertex> path = new ArrayList<>();
+        Vertex current = end;
+        while (current != null) {
+            path.add(current);
+            current = parentMap.get(current);
+        }
+
+        Collections.reverse(path);
+        return path;
+    }
+
+
 }

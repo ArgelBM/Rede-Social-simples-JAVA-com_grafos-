@@ -73,12 +73,8 @@ public class ControlerAmigos implements Initializable {
                 throw new RuntimeException(e);
             }
         }
-
         qtSeguidores1.setText(Integer.toString(seguidores));
-        System.out.println(seguidores);
         qtSeguindo1.setText(Integer.toString(seguindo));
-        System.out.println(seguindo);
-
         email.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getLogin());
         nomeDeUsuario.setText(ControladorUsuarios.getInstance().getUsuarioAtivo().getNomeUsuario());
 

@@ -13,6 +13,7 @@ import negocio.beans.Graph;
 import negocio.beans.Vertex;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControlerPerfil implements Initializable {
@@ -74,7 +75,17 @@ public class ControlerPerfil implements Initializable {
             System.out.println(RepositorioGeral.getInstance().findByVertex(vertex).getNomeUsuario());
         }
 
+        Vertex start = ControladorUsuarios.getInstance().getUsuarioAtivo().getId();
+        Vertex end = Perfil;
 
+        // Encontrar o caminho entre os vértices
+        List<Vertex> path = RepositorioGeral.getInstance().getGraph().findPath(start, end);
+
+        if (path != null) {
+            System.out.println("Caminho de " + start + " para " + end + ": " + path);
+        } else {
+            System.out.println("Não há caminho de " + start + " para " + end);
+        }
 
 
     }
